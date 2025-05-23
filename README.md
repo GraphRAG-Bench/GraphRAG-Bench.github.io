@@ -1,1 +1,1 @@
-#GraphRAG-Bench Leaderboard
+# GraphRAG-Bench Leaderboard
