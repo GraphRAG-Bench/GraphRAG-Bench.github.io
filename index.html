@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>NPPC</title>
+  <meta name="description" content="NPPC" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta property="og:image" content="nppc.png" />
+  <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="..." crossorigin="anonymous" />
+  <!-- Google tag (gtag.js) -->
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background: #ffffff;
+      color: #050505;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    td,
+    th {
+      font-family: inherit;
+      /* Ensures all elements follow the body font */
+    }
+  </style>
+  <!-- gtag 脚本（保持异步外部加载） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9XFCMDPNS"></script>
+
+  <!-- PapaParse 依赖 -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <!-- 主 JS 文件 -->
+  <script src="scripts.js"></script>
+
+</head>
+
+<body>
+  <section style="background-color: #81D8CF">
+    <div class="content-wrapper title-wrapper" style="flex-direction: column">
+      <div class="title-container">
+        <!-- <img src="nppc.png" style="height: 90px; padding-top: 0.0em; padding-left: 0.5em" /> -->
+        <h1 style="text-align: center">
+          When to Use Graphs in RAG: <br />
+          A Comprehensive Analysis for Graph Retrieval-Augmented Generation
+        </h1>
+      </div>
+      <!-- <div
+            style="
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              padding-bottom: 15px;
+            "
+          >
+            <img
+              src="nppc.png"
+              style="height: 90px; padding-top: 1.0em; padding-left: 0.5em"
+            />
+            <h2 style="text-align: center">
+              Nondeterministic Polynomial-time Problem Challenge: <br />
+              An Ever-Scaling Reasoning Benchmark for LLMs
+            </h2>
+          </div> -->
+      <!-- <h3 style="text-align: center;margin-top:1em;">
+        <p style="line-height: 1.3333em;">
+          Chang Yang<sup>* 1</sup>, Ruiyu Wang<sup>* 2</sup>, <br />
+          Junzhe Jiang<sup>1</sup>, Qi Jiang<sup>3</sup>, Qinggang Zhang<sup>1</sup>, Yanchen Deng<sup>4</sup>, Shuxin
+          Li<sup>4</sup>, Shuyue Hu<sup>5</sup>, <br />
+          Bo Li<sup>1</sup>, Florian T. Pokorny<sup>2</sup>, Xiao Huang<sup>1</sup>, Xinrun Wang<sup>† 6</sup>
+      </h3>
+      <p style="text-align: center;margin-top:1em;">
+        <sup>1</sup>The Hong Kong Polytechnic University, <sup>2</sup>KTH Royal Institute of Technology, <br />
+        <sup>3</sup>Carnegie Mellon University, <sup>4</sup>Nanyang Technological University, <br />
+        <sup>5</sup>Shanghai AI Lab, <sup>6</sup>Singapore Management University<br />
+        <sup>*</sup>Equal contribution, <sup>†</sup>Corresponding author
+      </p> -->
+      <div class="content-wrapper" style="margin-top: 2em">
+        <!-- <a href="https://arxiv.org/abs/2504.11239">
+          <button class="outline">
+            <i class="fa fa-paperclip"></i> Paper&nbsp;
+          </button>
+        </a> -->
+        <a href="https://github.com/GraphRAG-Bench/GraphRAG-Bench.github.io.git">
+          <button class="outline">
+            <i class="fab fa-github"></i> Code&nbsp;
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- News -->
+  <section class="main-container">
+    <div class="content-wrapper link-section" style="display: flex; justify-content: center; align-items: center;"
+      id="news">
+      <div class="content-box">
+        <h2 class="text-title">🎉 News</h2>
+        <br>
+        <p style="margin-bottom: 0.7em">
+          <b>[2025-05-25]</b> Leaderboard is on!
+        </p>
+        <!-- <p style="margin-bottom: 0.5em">
+          <b>[2025-04-15]</b> We introduce <a href="https://arxiv.org/abs/2504.11239" class="light-pink-link"
+            target="_blank" rel="noopener noreferrer">NPPC</a>, an ever-scaling reasoning benchmark for LLMs! -->
+      </div>
+    </div>
+    <!-- Leaderboard -->
+    <div class="content-wrapper link-section" id="leaderboard">
+      <div class="content-box leaderboard">
+        <h2 class="text-title">🏆 Leaderboard</h2>
+
+        <!-- <div class="content-box filter-section">
+          <div class="filter-section-item" style="margin: 0;"> -->
+            <!-- Searching -->
+            <!-- <div class="search-section content-box" style="margin: 0;">
+              <div class="search-section content-box">
+                <h3>Search:</h3>
+                <input type="text" id="searchInput" placeholder="Type to search...">
+                <button class="btn-radius" onclick="searchTable()">Search</button>
+              </div>
+            </div> -->
+            <!-- Select Display -->
+            <!-- <div class="content-box" style="margin-bottom: 0;">
+              <div class="column-select" style="padding-bottom: 0px;">
+                <div>
+                  <h3>Select Columns to Display:</h3>
+                </div>
+                <div class="column-select-bottom">
+                  <label><input type="checkbox" class="custom-checkbox" data-col="3" checked> Date</label>
+                  <label><input type="checkbox" class="custom-checkbox" data-col="16" checked> Open-source</label>
+                  <label><input type="checkbox" class="custom-checkbox" data-col="17" checked> Reasoning</label>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- Model Selection -->
+          <!-- <div class="filter-section-item content-box" style="margin: 0;">
+            <h3>Model Filter:</h3>
+            <div class="model-filter-section-inline">
+              <div>
+                <h4>Open-Source?</h4>
+                <label for="open-source-yes" class="label-radius">
+                  <input type="checkbox" class="custom-checkbox" id="open-source-yes" data-label="-3"
+                    value="open-source" checked>True
+                </label>
+                <label for="proprietary-yes" class="label-radius">
+                  <input type="checkbox" class="custom-checkbox" id="proprietary-yes" data-label="-3"
+                    value="proprietary" checked>False
+                </label>
+              </div>
+            </div> -->
+            <!-- <div class="model-filter-section-inline">
+              <div>
+                <h4 for="reasoning-filter">Reasoning?</h4>
+                <label for="reasoning-yes" class="label-radius">
+                  <input type="checkbox" class="custom-checkbox" id="reasoning-yes" data-label="-2" value="reasoning"
+                    checked>True
+                </label>
+                <label for="vanilla-yes" class="label-radius">
+                  <input type="checkbox" class="custom-checkbox" id="vanilla-yes" data-label="-2" value="non-reasoning"
+                    checked>False
+                </label>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="tabcontent" style="display: block" id="leaderboard-story">
+          <h3 class="table-title">GraphRAG-Bench (Story)</h3>
+          <table class="table scrollable" id="leaderboard-table-story" data-header-starter="1">
+            <thead>
+              <!-- 一级指标行 -->
+              <tr>
+                <th rowspan="2" onclick="sortTable(0, this)" data-sort="none">
+                  <div class="sticky-header-content">Model<span class="arrow">↕</span></div>
+                </th>
+                <th rowspan="2" onclick="sortTable(1, this)" data-sort="none">
+                  <div class="sticky-header-content">Rank<span class="arrow">↕</span></div>
+                </th>
+                <th rowspan="2" onclick="sortTable(2, this)" data-sort="none">
+                  <div class="sticky-header-content">Average<span class="arrow">↕</span></div>
+                </th>
+                <th rowspan="2" onclick="sortTable(3, this)" data-sort="none">
+                  <div class="sticky-header-content">Date<span class="arrow">↕</span></div>
+                </th>
+
+                <th colspan="2">Fact Retrieval</th>
+                <th colspan="2">Complex Reasoning</th>
+                <th colspan="2">Contextual Summarize</th>
+                <th colspan="3">Creative Generation</th>
+
+                <th rowspan="2">
+                  <div class="sticky-header-content">Link</div>
+                </th>
+              </tr>
+
+              <!-- 二级指标行 -->
+              <tr>
+                <th onclick="sortTable(4, this)" data-sort="none">
+                  <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
+                </th>
+                <th onclick="sortTable(5, this)" data-sort="none">
+                  <div class="sticky-header-content">ROUGE-L<span class="arrow">↕</span></div>
+                </th>
+
+                <th onclick="sortTable(6, this)" data-sort="none">
+                  <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
+                </th>
+                <th onclick="sortTable(7, this)" data-sort="none">
+                  <div class="sticky-header-content">ROUGE-L<span class="arrow">↕</span></div>
+                </th>
+
+                <th onclick="sortTable(8, this)" data-sort="none">
+                  <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
+                </th>
+                <th onclick="sortTable(9, this)" data-sort="none">
+                  <div class="sticky-header-content">Cov<span class="arrow">↕</span></div>
+                </th>
+
+                <th onclick="sortTable(10, this)" data-sort="none">
+                  <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
+                </th>
+                <th onclick="sortTable(11, this)" data-sort="none">
+                  <div class="sticky-header-content">FS<span class="arrow">↕</span></div>
+                </th>
+                <th onclick="sortTable(12, this)" data-sort="none">
+                  <div class="sticky-header-content">Cov<span class="arrow">↕</span></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-body-story">
+              <!-- 数据行将动态加载 -->
+            </tbody>
+          </table>
+        </div>
+
+
+        <div class="tabcontent" style="display: block" id="leaderboard-medical">
+          <h3 class="table-title">GraphRAG-Bench (Medical)</h3>
+          <table class="table scrollable" id="leaderboard-table-medical" data-header-starter="1">
+            <thead>
+              <!-- 一级指标行 -->
+              <tr>
+                <th rowspan="2" onclick="sortTable(0, this)" data-sort="none">
+                  <div class="sticky-header-content">Model<span class="arrow">↕</span></div>
+                </th>
+                <th rowspan="2" onclick="sortTable(1, this)" data-sort="none">
+                  <div class="sticky-header-content">Rank<span class="arrow">↕</span></div>
+                </th>
+                <th rowspan="2" onclick="sortTable(2, this)" data-sort="none">
+                  <div class="sticky-header-content">Average<span class="arrow">↕</span></div>
+                </th>
+                <th rowspan="2" onclick="sortTable(3, this)" data-sort="none">
+                  <div class="sticky-header-content">Date<span class="arrow">↕</span></div>
+                </th>
+
+                <th colspan="2">Fact Retrieval</th>
+                <th colspan="2">Complex Reasoning</th>
+                <th colspan="2">Contextual Summarize</th>
+                <th colspan="3">Creative Generation</th>
+
+                <th rowspan="2">
+                  <div class="sticky-header-content">Link</div>
+                </th>
+              </tr>
+
+              <!-- 二级指标行 -->
+              <tr>
+                <th onclick="sortTable(4, this)" data-sort="none">
+                  <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
+                </th>
+                <th onclick="sortTable(5, this)" data-sort="none">
+                  <div class="sticky-header-content">ROUGE-L<span class="arrow">↕</span></div>
+                </th>
+
+                <th onclick="sortTable(6, this)" data-sort="none">
+                  <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
+                </th>
+                <th onclick="sortTable(7, this)" data-sort="none">
+                  <div class="sticky-header-content">ROUGE-L<span class="arrow">↕</span></div>
+                </th>
+
+                <th onclick="sortTable(8, this)" data-sort="none">
+                  <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
+                </th>
+                <th onclick="sortTable(9, this)" data-sort="none">
+                  <div class="sticky-header-content">Cov<span class="arrow">↕</span></div>
+                </th>
+
+                <th onclick="sortTable(10, this)" data-sort="none">
+                  <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
+                </th>
+                <th onclick="sortTable(11, this)" data-sort="none">
+                  <div class="sticky-header-content">FS<span class="arrow">↕</span></div>
+                </th>
+                <th onclick="sortTable(12, this)" data-sort="none">
+                  <div class="sticky-header-content">Cov<span class="arrow">↕</span></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-body-medical">
+              <!-- 数据行将动态加载 -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Example -->
+    <div class="content-wrapper slideshow link-section" id="examples">
+      <div class="content-box">
+        <div class="navigation">
+          <h2 class="text-title">🧩 Examples</h2>
+          <a class="slide-btn" id="prev_btn"><i class="fa-solid fa-arrow-left"></i></a>
+          <a class="slide-btn" id="next_btn"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="slider">
+          <div class="slider-item active">
+            <div class="text-content">
+              <p><strong>Category:</strong> Level 1</p>
+              <p><strong>Task Name:</strong> Fact Retrieval</p>
+              <p><strong>Brief Description:</strong> Require retrieving isolated knowledge points with minimal
+                reasoning; mainly test precise keyword matching.</p>
+              <p><strong>Example:</strong> <em>Which region of France is Mont St. Michel located?</em></p>
+            </div>
+
+          </div>
+          <div class="slider-item">
+            <div class="text-content">
+              <p><strong>Category:</strong> Level 2</p>
+              <p><strong>Task Name:</strong> Complex Reasoning</p>
+              <p><strong>Brief Description:</strong> Require chaining multiple knowledge points across documents via
+                logical connections.</p>
+              <p><strong>Example:</strong> <em>How did Hinze’s agreement with Felicia relate to the perception of
+                  England’s rulers?</em></p>
+            </div>
+          </div>
+          <div class="slider-item">
+
+            <div class="text-content">
+              <p><strong>Category:</strong> Level 3</p>
+              <p><strong>Task Name:</strong> Contextual Summarize</p>
+              <p><strong>Brief Description:</strong> Involve synthesizing fragmented information into a coherent,
+                structured answer; emphasize logical coherence and context.</p>
+              <p><strong>Example:</strong> <em>What role does John Curgenven play as a Cornish boatman for the visitors
+                  exploring this region?</em></p>
+            </div>
+
+          </div>
+          <div class="slider-item">
+            <div class="text-content">
+              <p><strong>Category:</strong> Level 4</p>
+              <p><strong>Task Name:</strong> Creative Generation</p>
+              <p><strong>Brief Description:</strong> Require inference beyond retrieved content, often involving
+                hypothetical or novel scenarios.</p>
+              <p><strong>Example:</strong> <em>Retell the scene of King Arthur’s comparison to John Curgenven and the
+                  exploration of the Cornish coastline as a newspaper article.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About -->
+    <div class="content-wrapper link-section" id="about">
+      <div class="content-box">
+        <h2 class="text-title">📖 About</h2>
+        <br>
+        <img src="RAGvsGraphRAG.jpg" style="width:80%;margin:auto;display:block;" />
+        <br>
+        <p class="text-content">
+          Graph retrieval-augmented generation (GraphRAG) has emerged as a powerful paradigm for enhancing large
+          language models (LLMs) with external knowledge. It leverages graphs to model the hierarchical structure
+          between specific concepts, enabling more coherent and effective knowledge retrieval for accurate reasoning.
+          Despite its conceptual promise, recent studies report that GraphRAG frequently underperforms vanilla RAG on
+          many real-world tasks. This raises a critical question: <strong>Is GraphRAG really effective, and in which scenarios
+          do graph structures provide measurable benefits for RAG systems?</strong> To address this, we propose GraphRAG-Bench, a
+          comprehensive benchmark designed to evaluate GraphRAG models on both hierarchical knowledge retrieval and deep
+          contextual reasoning. GraphRAG-Bench features a comprehensive dataset with tasks of increasing difficulty,
+          covering fact retrieval, complex reasoning, contextual summarization, and creative generation, and a
+          systematic evaluation across the entire pipeline, from graph construction and knowledge retrieval to final
+          generation. Leveraging this novel benchmark, we systematically investigate the conditions when GraphRAG
+          surpasses traditional RAG and the underlying reasons for its success, offering guidelines for its practical
+          application. <br />
+        </p class="text-content">
+        <br>
+        <h3 class="text-title" style="margin-bottom:0.5em">Contact</h3>
+        <p class="text-content">
+          <a href="mailto:GraphRAG@hotmail.com">GraphRAG@hotmail.com</a>,
+        </p class="text-content">
+        <br>
+        <!-- <h3 class="text-title" style="margin-bottom:0.5em">Citation</h3>
+        <pre id="citation"><div class="btn-pre-copy" onclick="preCopy()">Copy</div><code id="copy-content">@article{yang2025nondeterministic,
+  title={Nondeterministic Polynomial-time Problem Challenge: An Ever-Scaling Reasoning Benchmark for LLMs},
+  author={Yang, Chang and Wang, Ruiyu and Jiang, Junzhe and Jiang, Qi and Zhang, Qinggang and Deng, Yanchen and Li, Shuxin and Hu, Shuyue and Li, Bo and Pokorny, Florian T and Huang, Xiao and Wang, Xinrun},
+  journal={arXiv preprint arXiv:2504.11239},
+  year={2025}
+}</code></pre> -->
+      </div>
+    </div>
+  </section>
+  </div>
+</body>
+
+</html>

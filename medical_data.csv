@@ -1,0 +1,10 @@
+Model,No,Average,Date,Fact_ACC,Fact_ROUGE_L,Reason_ACC,Reason_ROUGE_L,Summarize_ACC,Summarize_Cov,Creative_ACC,Creative_FS,Creative_Cov,Link
+RAG (w/o rerank),1,61.00 ,-,63.72,29.21,57.61,13.98,63.72,77.34,58.94,35.88,57.87,/
+RAG (w/ rerank),2,62.43 ,-,64.73,30.75,58.64,15.57,65.75,78.54,60.61,36.74,58.72,/
+GraphRAG (local),3,45.16 ,Apr-24,38.63,26.8,47.04,21.99,41.87,22.98,53.11,32.65,39.42,https://arxiv.org/abs/2404.16130
+GraphRAG (global),4,16.02 ,Apr-24,16.42,46,15.61,52.75,-,-,-,-,-,https://arxiv.org/abs/2404.16130
+HippoRAG,5,59.08 ,May-24,56.14,20.95,55.87,13.57,59.86,62.73,64.43,69.21,65.56,https://arxiv.org/abs/2405.14831
+HippoRAG2,6,64.85 ,Feb-25,66.28,36.69,61.98,36.97,63.08,46.13,68.05,58.78,51.54,https://arxiv.org/abs/2502.14802
+LightRAG,7,62.59 ,Oct-24,63.32,37.19,61.32,24.98,63.14,51.16,-,-,-,https://arxiv.org/abs/2410.05779
+Fast-GraphRAG,8,64.12 ,Oct-24,60.93,31.04,61.73,21.37,67.88,52.07,65.93,56.07,44.73,https://github.com/circlemind-ai/fast-graphrag
+RAPTOR,9,57.10 ,Jan-24,54.07,17.93,53.2,11.73,58.73,78.28,62.38,58.98,63.63,https://arxiv.org/abs/2401.18059
