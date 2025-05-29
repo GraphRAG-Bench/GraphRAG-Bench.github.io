@@ -7,6 +7,7 @@
   <meta name="description" content="GraphRAG-Bench" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <!-- <meta property="og:image" content="nppc.png" /> -->
   <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
   <!-- <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
   <link rel="stylesheet" href="css/normalize.css" />
@@ -109,6 +110,33 @@
             target="_blank" rel="noopener noreferrer">NPPC</a>, an ever-scaling reasoning benchmark for LLMs! -->
       </div>
     </div>
+    <!-- About -->
+    <div class="content-wrapper link-section" id="about">
+      <div class="content-box">
+        <h2 class="text-title">📖 About</h2>
+        <br>
+        <img src="RAGvsGraphRAG.jpg" style="width:80%;margin:auto;display:block;" />
+        <br>
+        <p class="text-content">
+          Graph retrieval-augmented generation (GraphRAG) has emerged as a powerful paradigm for enhancing large
+          language models (LLMs) with external knowledge. It leverages graphs to model the hierarchical structure
+          between specific concepts, enabling more coherent and effective knowledge retrieval for accurate reasoning.
+          Despite its conceptual promise, recent studies report that GraphRAG frequently underperforms vanilla RAG on
+          many real-world tasks. This raises a critical question: <strong>Is GraphRAG really effective, and in which
+            scenarios
+            do graph structures provide measurable benefits for RAG systems?</strong> To address this, we propose
+          GraphRAG-Bench, a
+          comprehensive benchmark designed to evaluate GraphRAG models on both hierarchical knowledge retrieval and deep
+          contextual reasoning. GraphRAG-Bench features a comprehensive dataset with tasks of increasing difficulty,
+          covering fact retrieval, complex reasoning, contextual summarization, and creative generation, and a
+          systematic evaluation across the entire pipeline, from graph construction and knowledge retrieval to final
+          generation. Leveraging this novel benchmark, we systematically investigate the conditions when GraphRAG
+          surpasses traditional RAG and the underlying reasons for its success, offering guidelines for its practical
+          application. <br />
+        </p>
+      </div>
+    </div>
+
     <!-- Leaderboard -->
     <div class="content-wrapper link-section" id="leaderboard">
       <div class="content-box leaderboard">
@@ -116,16 +144,16 @@
 
         <!-- <div class="content-box filter-section">
           <div class="filter-section-item" style="margin: 0;"> -->
-            <!-- Searching -->
-            <!-- <div class="search-section content-box" style="margin: 0;">
+        <!-- Searching -->
+        <!-- <div class="search-section content-box" style="margin: 0;">
               <div class="search-section content-box">
                 <h3>Search:</h3>
                 <input type="text" id="searchInput" placeholder="Type to search...">
                 <button class="btn-radius" onclick="searchTable()">Search</button>
               </div>
             </div> -->
-            <!-- Select Display -->
-            <!-- <div class="content-box" style="margin-bottom: 0;">
+        <!-- Select Display -->
+        <!-- <div class="content-box" style="margin-bottom: 0;">
               <div class="column-select" style="padding-bottom: 0px;">
                 <div>
                   <h3>Select Columns to Display:</h3>
@@ -138,8 +166,8 @@
               </div>
             </div>
           </div> -->
-          <!-- Model Selection -->
-          <!-- <div class="filter-section-item content-box" style="margin: 0;">
+        <!-- Model Selection -->
+        <!-- <div class="filter-section-item content-box" style="margin: 0;">
             <h3>Model Filter:</h3>
             <div class="model-filter-section-inline">
               <div>
@@ -154,7 +182,7 @@
                 </label>
               </div>
             </div> -->
-            <!-- <div class="model-filter-section-inline">
+        <!-- <div class="model-filter-section-inline">
               <div>
                 <h4 for="reasoning-filter">Reasoning?</h4>
                 <label for="reasoning-yes" class="label-radius">
@@ -176,16 +204,16 @@
             <thead>
               <!-- 一级指标行 -->
               <tr>
-                <th rowspan="2" onclick="sortTable(0, this)" data-sort="none">
+                <th data-col="0" rowspan="2" data-sort="none">
                   <div class="sticky-header-content">Model<span class="arrow">↕</span></div>
                 </th>
-                <th rowspan="2" onclick="sortTable(1, this)" data-sort="none">
-                  <div class="sticky-header-content">No<span class="arrow">↕</span></div>
+                <th data-col="1" rowspan="2" data-sort="none">
+                  <div class="sticky-header-content">Rank<span class="arrow">↕</span></div>
                 </th>
-                <th rowspan="2" onclick="sortTable(2, this)" data-sort="none">
+                <th data-col="2" rowspan="2" data-sort="none">
                   <div class="sticky-header-content">Average<span class="arrow">↕</span></div>
                 </th>
-                <th rowspan="2" onclick="sortTable(3, this)" data-sort="none">
+                <th data-col="3" rowspan="2" data-sort="none">
                   <div class="sticky-header-content">Date<span class="arrow">↕</span></div>
                 </th>
 
@@ -201,34 +229,34 @@
 
               <!-- 二级指标行 -->
               <tr>
-                <th onclick="sortTable(4, this)" data-sort="none">
+                <th data-col="4" data-sort="none">
                   <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
                 </th>
-                <th onclick="sortTable(5, this)" data-sort="none">
+                <th data-col="5" data-sort="none">
                   <div class="sticky-header-content">ROUGE-L<span class="arrow">↕</span></div>
                 </th>
 
-                <th onclick="sortTable(6, this)" data-sort="none">
+                <th data-col="6" data-sort="none">
                   <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
                 </th>
-                <th onclick="sortTable(7, this)" data-sort="none">
+                <th data-col="7" data-sort="none">
                   <div class="sticky-header-content">ROUGE-L<span class="arrow">↕</span></div>
                 </th>
 
-                <th onclick="sortTable(8, this)" data-sort="none">
+                <th data-col="8" data-sort="none">
                   <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
                 </th>
-                <th onclick="sortTable(9, this)" data-sort="none">
+                <th data-col="9" data-sort="none">
                   <div class="sticky-header-content">Cov<span class="arrow">↕</span></div>
                 </th>
 
-                <th onclick="sortTable(10, this)" data-sort="none">
+                <th data-col="10" data-sort="none">
                   <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
                 </th>
-                <th onclick="sortTable(11, this)" data-sort="none">
+                <th data-col="11" data-sort="none">
                   <div class="sticky-header-content">FS<span class="arrow">↕</span></div>
                 </th>
-                <th onclick="sortTable(12, this)" data-sort="none">
+                <th data-col="12" data-sort="none">
                   <div class="sticky-header-content">Cov<span class="arrow">↕</span></div>
                 </th>
               </tr>
@@ -246,16 +274,16 @@
             <thead>
               <!-- 一级指标行 -->
               <tr>
-                <th rowspan="2" onclick="sortTable(0, this)" data-sort="none">
+                <th data-col="0" rowspan="2" data-sort="none">
                   <div class="sticky-header-content">Model<span class="arrow">↕</span></div>
                 </th>
-                <th rowspan="2" onclick="sortTable(1, this)" data-sort="none">
+                <th data-col="1" rowspan="2" data-sort="none">
                   <div class="sticky-header-content">Rank<span class="arrow">↕</span></div>
                 </th>
-                <th rowspan="2" onclick="sortTable(2, this)" data-sort="none">
+                <th data-col="2" rowspan="2" data-sort="none">
                   <div class="sticky-header-content">Average<span class="arrow">↕</span></div>
                 </th>
-                <th rowspan="2" onclick="sortTable(3, this)" data-sort="none">
+                <th data-col="3" rowspan="2" data-sort="none">
                   <div class="sticky-header-content">Date<span class="arrow">↕</span></div>
                 </th>
 
@@ -271,34 +299,34 @@
 
               <!-- 二级指标行 -->
               <tr>
-                <th onclick="sortTable(4, this)" data-sort="none">
+                <th data-col="4" data-sort="none">
                   <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
                 </th>
-                <th onclick="sortTable(5, this)" data-sort="none">
+                <th data-col="5" data-sort="none">
                   <div class="sticky-header-content">ROUGE-L<span class="arrow">↕</span></div>
                 </th>
 
-                <th onclick="sortTable(6, this)" data-sort="none">
+                <th data-col="6" data-sort="none">
                   <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
                 </th>
-                <th onclick="sortTable(7, this)" data-sort="none">
+                <th data-col="7" data-sort="none">
                   <div class="sticky-header-content">ROUGE-L<span class="arrow">↕</span></div>
                 </th>
 
-                <th onclick="sortTable(8, this)" data-sort="none">
+                <th data-col="8" data-sort="none">
                   <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
                 </th>
-                <th onclick="sortTable(9, this)" data-sort="none">
+                <th data-col="9" data-sort="none">
                   <div class="sticky-header-content">Cov<span class="arrow">↕</span></div>
                 </th>
 
-                <th onclick="sortTable(10, this)" data-sort="none">
+                <th data-col="10" data-sort="none">
                   <div class="sticky-header-content">ACC<span class="arrow">↕</span></div>
                 </th>
-                <th onclick="sortTable(11, this)" data-sort="none">
+                <th data-col="11" data-sort="none">
                   <div class="sticky-header-content">FS<span class="arrow">↕</span></div>
                 </th>
-                <th onclick="sortTable(12, this)" data-sort="none">
+                <th data-col="12" data-sort="none">
                   <div class="sticky-header-content">Cov<span class="arrow">↕</span></div>
                 </th>
               </tr>
@@ -364,43 +392,18 @@
         </div>
       </div>
     </div>
-    <!-- About -->
-    <div class="content-wrapper link-section" id="about">
+    <!-- Contact -->
+    <div class="content-wrapper link-section" id="contact">
       <div class="content-box">
-        <h2 class="text-title">📖 About</h2>
-        <br>
-        <img src="RAGvsGraphRAG.jpg" style="width:80%;margin:auto;display:block;" />
+        <h2 class="text-title">📬 Contact</h2>
         <br>
         <p class="text-content">
-          Graph retrieval-augmented generation (GraphRAG) has emerged as a powerful paradigm for enhancing large
-          language models (LLMs) with external knowledge. It leverages graphs to model the hierarchical structure
-          between specific concepts, enabling more coherent and effective knowledge retrieval for accurate reasoning.
-          Despite its conceptual promise, recent studies report that GraphRAG frequently underperforms vanilla RAG on
-          many real-world tasks. This raises a critical question: <strong>Is GraphRAG really effective, and in which scenarios
-          do graph structures provide measurable benefits for RAG systems?</strong> To address this, we propose GraphRAG-Bench, a
-          comprehensive benchmark designed to evaluate GraphRAG models on both hierarchical knowledge retrieval and deep
-          contextual reasoning. GraphRAG-Bench features a comprehensive dataset with tasks of increasing difficulty,
-          covering fact retrieval, complex reasoning, contextual summarization, and creative generation, and a
-          systematic evaluation across the entire pipeline, from graph construction and knowledge retrieval to final
-          generation. Leveraging this novel benchmark, we systematically investigate the conditions when GraphRAG
-          surpasses traditional RAG and the underlying reasons for its success, offering guidelines for its practical
-          application. <br />
-        </p class="text-content">
+          <a href="mailto:GraphRAG@hotmail.com">GraphRAG@hotmail.com</a>
+        </p>
         <br>
-        <h3 class="text-title" style="margin-bottom:0.5em">Contact</h3>
-        <p class="text-content">
-          <a href="mailto:GraphRAG@hotmail.com">GraphRAG@hotmail.com</a>,
-        </p class="text-content">
-        <br>
-        <!-- <h3 class="text-title" style="margin-bottom:0.5em">Citation</h3>
-        <pre id="citation"><div class="btn-pre-copy" onclick="preCopy()">Copy</div><code id="copy-content">@article{yang2025nondeterministic,
-  title={Nondeterministic Polynomial-time Problem Challenge: An Ever-Scaling Reasoning Benchmark for LLMs},
-  author={Yang, Chang and Wang, Ruiyu and Jiang, Junzhe and Jiang, Qi and Zhang, Qinggang and Deng, Yanchen and Li, Shuxin and Hu, Shuyue and Li, Bo and Pokorny, Florian T and Huang, Xiao and Wang, Xinrun},
-  journal={arXiv preprint arXiv:2504.11239},
-  year={2025}
-}</code></pre> -->
       </div>
     </div>
+
   </section>
   </div>
 </body>
