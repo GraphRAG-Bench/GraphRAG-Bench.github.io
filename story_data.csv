@@ -1,10 +1,10 @@
-Model,No,Average,Date,Fact_ACC,Fact_ROUGE_L,Reason_ACC,Reason_ROUGE_L,Summarize_ACC,Summarize_Cov,Creative_ACC,Creative_FS,Creative_Cov,Link
-RAG (w/o rerank),1,47.93 ,-,58.76,37.35,41.35,15.12,50.08,82.53,41.52,47.46,37.84,
-RAG (w rerank),2,48.35 ,-,60.92,36.08,42.93,15.39,51.3,83.64,38.26,49.21,40.04,
-GraphRAG (local),3,50.93 ,Apr-24,49.29,26.11,50.93,24.09,64.4,75.58,39.1,55.44,35.65,https://arxiv.org/abs/2404.16130
-GraphRAG (global),4,44.52 ,Apr-24,36.92,17.32,43.17,15.12,56.87,80.55,41.11,75.15,30.34,https://arxiv.org/abs/2404.16130
-HippoRAG,5,44.75 ,May-24,52.93,26.65,38.52,11.16,48.7,85.55,38.85,71.53,38.97,https://arxiv.org/abs/2405.14831
-HippoRAG2,6,56.48 ,Feb-25,60.14,31.35,53.38,33.42,64.1,70.84,48.28,49.84,30.95,https://arxiv.org/abs/2502.14802
-LightRAG,7,45.09 ,Oct-24,58.62,35.72,49.07,24.16,48.85,63.05,23.8,57.28,25.01,https://arxiv.org/abs/2410.05779
-Fast-GraphRAG,8,52.02 ,Oct-24,56.95,35.9,48.55,21.12,56.41,80.82,46.18,57.19,36.99,https://github.com/circlemind-ai/fast-graphrag
-RAPTOR,9,43.24 ,Jan-24,49.25,23.74,38.59,11.66,47.1,82.33,38.01,70.85,35.88,https://arxiv.org/abs/2401.18059
+Model,Rank,Average,Date,Fact_ACC,Fact_ROUGE_L,Reason_ACC,Reason_ROUGE_L,Summarize_ACC,Summarize_Cov,Creative_ACC,Creative_FS,Creative_Cov,Link
+HippoRAG2,1,56.48,2025-02,60.14,31.35,53.38,33.42,64.1,70.84,48.28,49.84,30.95,https://arxiv.org/abs/2502.14802
+Fast-GraphRAG,2,52.02,2025-10,56.95,35.9,48.55,21.12,56.41,80.82,46.18,57.19,36.99,https://github.com/circlemind-ai/fast-graphrag
+GraphRAG (local),3,50.93,2025-04,49.29,26.11,50.93,24.09,64.4,75.58,39.1,55.44,35.65,https://arxiv.org/abs/2404.16130
+RAG (w rerank),4,48.35,-,60.92,36.08,42.93,15.39,51.3,83.64,38.26,49.21,40.04,
+RAG (w/o rerank),5,47.93,-,58.76,37.35,41.35,15.12,50.08,82.53,41.52,47.46,37.84,
+LightRAG,6,45.09,2025-10,58.62,35.72,49.07,24.16,48.85,63.05,23.8,57.28,25.01,https://arxiv.org/abs/2410.05779
+HippoRAG,7,44.75,2025-05,52.93,26.65,38.52,11.16,48.7,85.55,38.85,71.53,38.97,https://arxiv.org/abs/2405.14831
+GraphRAG (global),8,44.52,2025-04,36.92,17.32,43.17,15.12,56.87,80.55,41.11,75.15,30.34,https://arxiv.org/abs/2404.16130
+RAPTOR,9,43.24,2025-01,49.25,23.74,38.59,11.66,47.1,82.33,38.01,70.85,35.88,https://arxiv.org/abs/2401.18059
