@@ -110,6 +110,9 @@ function loadCSVData(csvFile, tableId, tbodyId) {
       let originalRows = [];
 
       data.forEach(row => {
+        if (!row || Object.values(row).every(v => v === undefined || v === null || v === "")) {
+            return;
+        }
         const tr = document.createElement("tr");
 
         columnOrder.forEach(col => {
