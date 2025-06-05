@@ -5,8 +5,7 @@ This repository hosts the official website for the GraphRAG-Bench project, a com
 ## Website Overview
 
 ### 🎉 News
-- Latest project updates and announcements
-- Leaderboard activation status
+- **[2025-05-25]** Leaderboard is on!
 
 ### 📖 About
 - Introduces Graph Retrieval-Augmented Generation (GraphRAG) concept
