@@ -1,5 +1,5 @@
 Model,Rank,Average,Date,Fact_ACC,Fact_ROUGE_L,Reason_ACC,Reason_ROUGE_L,Summarize_ACC,Summarize_Cov,Creative_ACC,Creative_FS,Creative_Cov,Link
-AtlasGraphRAG,1,75.62 ,2026.08 ,73.73 ,43.77 ,76.35 ,40.09 ,78.90 ,59.85 ,73.48 ,35.46 ,46.84 ,
+AtlasGraphRAG,1,75.62 ,2026.08 ,73.73 ,43.77 ,76.35 ,40.09 ,78.90 ,59.85 ,73.48 ,35.46 ,46.84 ,https://api.atlasgraphrag.xyz/docs
 G-reasoner,2,73.30 ,2025.09,68.84 ,44.73 ,75.17 ,29.10,77.23,60.64,72.04,53.65,48.31,https://arxiv.org/pdf/2509.24276
 AutoPrunedRetriever-llm,3,67.00 ,2026.02,61.25 ,34.69 ,71.59 ,31.11 ,70.14 ,40.59 ,65.02 ,33.06 ,28.62 ,https://arxiv.org/abs/2602.04926
 HippoRAG2,4,64.85 ,2025.02,66.28 ,36.69 ,61.98 ,36.97 ,63.08 ,46.13 ,68.05 ,58.78 ,51.54 ,https://arxiv.org/abs/2502.14802
