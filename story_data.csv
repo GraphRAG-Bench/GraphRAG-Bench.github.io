@@ -1,6 +1,6 @@
 Model,Rank,Average,Date,Fact_ACC,Fact_ROUGE_L,Reason_ACC,Reason_ROUGE_L,Summarize_ACC,Summarize_Cov,Creative_ACC,Creative_FS,Creative_Cov,Link
 KnowCosmos,1,70.34,2025.09,67.13,40.67,64.25,29.08,83.00,42.68,67.00,24.01,33.41,https://www.galaxybase.com/graphRag
-Bodhi-GraphRAG,2,66.30,2026.10,68.19,49.96,60.78,33.48,70.49,46.08,65.74,58.32,45.58,https://github.com/raviranjan0309/bodhi-graphRAG-bench
+Sapient-Bodhi-GraphRAG,2,66.30,2026.10,68.19,49.96,60.78,33.48,70.49,46.08,65.74,58.32,45.58,https://github.com/raviranjan0309/bodhi-graphRAG-bench
 AtlasGraphRAG,3,66.18 ,2026.08 ,66.37 ,48.41 ,61.80 ,32.34 ,71.47 ,54.54 ,65.09 ,44.04 ,41.45 ,https://api.atlasgraphrag.xyz/docs
 GraphRAG-SDK,4,66.09,2026.08,65.49,41.82,59.26,24.62,75.42,54.11,64.21,68.77,43.38,https://github.com/FalkorDB/GraphRAG-SDK
 KT-MOSAIC,5,64.28,2026.09,65.43,43.95,57.57,28.89,74.20,44.21,55.18,59.33,33.02,https://arxiv.org/abs/2609.11065
